@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="topbar">
+    <h1>Dashboard</h1>
+    <div class="topbar-right">
+      <span>Olá, {{ username }}</span>
+      <a href="{{ url_for('logout') }}">Sair</a>
+    </div>
+  </header>
+
+  <main class="grid">
+    <section class="card">
+      <h2>Clima</h2>
+      <form id="weather-form">
+        <input type="text" id="city-input" placeholder="Ex: São Paulo" required>
+        <button type="submit">Buscar</button>
+      </form>
+      <div id="weather-result" class="result"></div>
+    </section>
+
+    <section class="card">
+      <h2>Criptomoedas</h2>
+      <table id="crypto-table">
+        <thead>
+          <tr><th>Moeda</th><th>USD</th><th>BRL</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
