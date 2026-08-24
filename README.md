@@ -3,6 +3,8 @@
 Mini dashboard web (Flask + HTML/CSS/JS) com login e dados em tempo real de
 clima e criptomoedas, consumidos de APIs públicas gratuitas (sem chave de API).
 
+![Dashboard rodando](docs/screenshot.png)
+
 ## Segurança aplicada
 
 - Senha do usuário nunca é armazenada em texto puro — só o hash
